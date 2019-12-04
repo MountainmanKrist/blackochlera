@@ -1,0 +1,8 @@
+@import 'variables';
+@import 'bootstrap/bootstrap';
+
+body {
+  background: $main-background-color;
+  color: $bodyColor;
+  font-family: $bodyFont;
+}
