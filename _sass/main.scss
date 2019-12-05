@@ -62,6 +62,14 @@ body {
   transition: height 0s ease;
 }
 
+[class="navbar-toggler"] #navActiveMenuText  {
+  display: none;
+}
+
+[class="navbar-toggler collapsed"] #navDisabledMenuText{
+  display: none;
+}
+
 // nav {
 //   position: relative;
 //   display: flex;

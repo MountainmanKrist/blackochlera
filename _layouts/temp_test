@@ -19,20 +19,30 @@
         {{ content }}
       </div>
       {% if page.images_bottom %}
-        <div class="row">
         {% assign image_files = site.static_files %}
+        {% capture _ %}{% increment active_row %}{% endcapture %}
+        <div class="row">
         {% for image in image_files %}
           {% if image.path contains page.image_path %}
-            {% assign remainder = image_counter | modulo: 4 %}
-            {% capture _ %}{% increment image_counter %}{% endcapture %}
-            {% if remainder == 0 %}
+            {% assign remainder = counter | modulo: 4 %}
+            {% if remainder == 0 or counter == 0 %}
+              <!-- {% if active_row > 0 %}
+                {% capture _ %}{% decrement active_row %}{% endcapture %}
+                </div>
+              {% endif %} -->
               <div class="w-100"></div>
+              <!-- <div class="row"> -->
+              {% capture _ %}{% increment active_row %}{% endcapture %}
             {% endif %}
             <div class="col">
               <img src="{{ site.url }}{{ image.path }}" class="img-thumbnail" alt="image"/>
             </div>
+            {% capture _ %}{% increment counter %}{% endcapture %}
           {% endif %}
         {% endfor %}
+        <!-- {% if active_row > 0 %}
+          </div>
+        {% endif %} -->
       </div>
       {% endif %}
     </div>

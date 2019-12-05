@@ -1,6 +1,17 @@
 
 <nav id="navbar" class="navbar justify-content-center navbar-expand-md navbar-dark bg-dark">
-	<ul class="collapse navbar-collapse justify-content-center" id="navbarToggle">
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <div id="navActiveMenuText">
+            <i class="fas fa-chevron-down"></i>
+            <!-- <span> Meny </span> -->
+        </div> 
+        <div id="navDisabledMenuText">
+            <i class="fas fa-chevron-up"></i>
+            <!-- <span> Stäng </span> -->
+        </div> 
+        <!-- <span class="navbar-toggler-icon" aria-hidden="true"> Menu </span> -->
+    </button>
+	<ul class="navbar-collapse justify-content-center collapse" id="navbarToggle">
 		{% assign pages = site.pages %}
 		{% for page in pages %}
 			{% assign class = 'active' %}
@@ -12,7 +23,4 @@
             {% endif %}
 		{% endfor %}
     </ul>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" aria-hidden="true"> Menu </span>
-    </button>
 </nav>

@@ -6,3 +6,10 @@ author: "Göran Kristiansson"
 description: "Tatueringar, keramik och konst."
 
 # Build settings (Q: Is this needed?)
+
+plugins:
+  - jekyll-maps
+
+maps:
+  google:
+    api_key: AIzaSyBD64fXXZHGQr-E6R0x01hYfEsvhEOaZ-k
