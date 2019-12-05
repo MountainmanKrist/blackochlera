@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Ingrid"
+image_path: "ingrid"
+images_bottom: true
+---
+
+<h1> Ingrid </h1>
+Ingrid Wahlström, keramiker
+
+Kontakt: maila  ingrid.wahlstrom@gmail.com
+
+{% assign image_files = site.static_files %}
+{% for image in image_files %}
+    {% if image.path contains 'ingrid' %}
+        <img src="{{ site.url }}{{ image.path }}" class="img-responsive" alt="image"/>
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Kerstin"
+image_path: "kerstin"
+images_bottom: true
+---
+
+
+<h1>Kerstin</h1>
+
+Kerstin Bergman, keramiker
+
+Kontakt: maila tittibergman@hotmail.com
+
+{% assign image_files = site.static_files %}
+{% for image in image_files %}
+    {% if image.path contains 'kerstin' %}
+        <img src="{{ site.url }}{{ image.path }}" class="img-responsive" alt="image"/>
+    {% endif %}
+{% endfor %}
