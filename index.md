@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Happy Jekylling!"
+title: "Bläck och lera"
 ---
 
 ## You're ready to go!

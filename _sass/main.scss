@@ -1,8 +1,105 @@
 @import 'variables';
 @import 'bootstrap/bootstrap';
 
+@include media-breakpoint-up(sm) { 
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  top: auto;
+  left: auto;
+  width: 100%;
+  margin:0 auto;
+  font-size: 11px;
+  align-items: center;
+  background: $bodyColor
+}
+@include media-breakpoint-up(md) { 
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  top: auto;
+  left: auto;
+  width: 100%;
+  margin:0 auto;
+  font-size: 11px;
+  align-items: center;
+  background: $bodyColor
+ }
+@include media-breakpoint-up(lg) { 
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  top: auto;
+  left: auto;
+  width: 60%;
+  margin:0 auto;
+  font-size: 11px;
+  align-items: center;
+  background: transparent;
+}
+@include media-breakpoint-up(xl) { 
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  top: auto;
+  left: auto;
+  width: 60%;
+  margin:0 auto;
+  font-size: 11px;
+  align-items: center;
+  background: transparent;
+}
+
 body {
   background: $main-background-color;
   color: $bodyColor;
   font-family: $bodyFont;
+}
+
+.collapsing {
+  -webkit-transition: height 0s ease;
+  -o-transition: height 0s ease;
+  transition: height 0s ease;
+}
+
+// nav {
+//   position: relative;
+//   display: flex;
+//   flex-wrap: wrap;
+//   top: auto;
+//   left: auto;
+//   width: 60%;
+//   margin:0 auto;
+//   font-size: 11px;
+// }
+
+nav ul {
+  margin: 1em auto 30px;
+  text-align: center;
+  padding: 0;
+
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 1em 1em 0;
+  margin: 0;
+  text-align: -webkit-match-parent;
+
+  font-family: Lato;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  text-decoration: none;
+  list-style-type: none;
 }

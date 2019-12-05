@@ -1,5 +1,5 @@
 url: "blackochlera.com" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "www" # the subpath of your site, e.g. /blog
+# baseurl: "www" # the subpath of your site, e.g. /blog
 title: "Bläck och lera" # the name of your site, e.g. ACME Corp.
 email: "goranbergmankristiansson@gmail.com"
 author: "Göran Kristiansson"
