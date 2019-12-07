@@ -2,52 +2,12 @@
 @import 'bootstrap/bootstrap';
 
 @include media-breakpoint-up(sm) { 
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  top: auto;
-  left: auto;
-  width: 100%;
-  margin:0 auto;
-  font-size: 11px;
-  align-items: center;
-  background: $bodyColor
 }
 @include media-breakpoint-up(md) { 
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  top: auto;
-  left: auto;
-  width: 100%;
-  margin:0 auto;
-  font-size: 11px;
-  align-items: center;
-  background: $bodyColor
- }
+}
 @include media-breakpoint-up(lg) { 
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  top: auto;
-  left: auto;
-  width: 60%;
-  margin:0 auto;
-  font-size: 11px;
-  align-items: center;
-  background: transparent;
 }
 @include media-breakpoint-up(xl) { 
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  top: auto;
-  left: auto;
-  width: 60%;
-  margin:0 auto;
-  font-size: 11px;
-  align-items: center;
-  background: transparent;
 }
 
 body {
@@ -69,17 +29,6 @@ body {
 [class="navbar-toggler collapsed"] #navDisabledMenuText{
   display: none;
 }
-
-// nav {
-//   position: relative;
-//   display: flex;
-//   flex-wrap: wrap;
-//   top: auto;
-//   left: auto;
-//   width: 60%;
-//   margin:0 auto;
-//   font-size: 11px;
-// }
 
 nav ul {
   margin: 1em auto 30px;

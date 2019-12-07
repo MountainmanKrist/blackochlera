@@ -1,0 +1,10 @@
+<div class="row justify-content-center">
+    {% assign image_files = site.static_files | where: "folder", include.folder %}
+    {% for image in image_files %}
+    {% assign remainder = image_counter | modulo: 4 %}
+    {% capture _ %}{% increment image_counter %}{% endcapture %}
+    {% if remainder == 0 %}
+    {% endif %}
+    <img src="{{ site.url }}{{ image.path }}" class="img-thumbnail" alt="image" />
+    {% endfor %}
+</div>

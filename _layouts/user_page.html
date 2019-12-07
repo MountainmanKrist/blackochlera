@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-  {% include header.html %}
-  <body>
-    {% include navigation.html %}
-    <div class="container">
-    
-      <h1> {{ page.title }} </h1>
+{% include header.html %}
 
-      {% if page.images_top %}
-        {% assign image_files = site.static_files %}
-        {% for image in image_files %}
-            {% if image.path contains page.image_path %}
-                <img src="{{ site.url }}{{ image.path }}" class="img-thumbnail" alt="image"/>
-            {% endif %}
-        {% endfor %}
-      {% endif %}
-      <div class="row">
-        {{ content }}
-      </div>
-      {% if page.images_bottom %}
-        <div class="row">
-        {% assign image_files = site.static_files %}
-        {% for image in image_files %}
-          {% if image.path contains page.image_path %}
-            {% assign remainder = image_counter | modulo: 4 %}
-            {% capture _ %}{% increment image_counter %}{% endcapture %}
-            {% if remainder == 0 %}
-              <div class="w-100"></div>
-            {% endif %}
-            <div class="col">
-              <img src="{{ site.url }}{{ image.path }}" class="img-thumbnail" alt="image"/>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
-    {% include footer.html %}
-  </body>
+<body>
+	{% include navigation.html %}
+	<div class="container">
+		{% if page.images_top %}
+			{% include image_table.html folder=page.image_path %}
+		{% endif %}
+		<!-- <div class="container"> -->
+		<div class="row justify-content-center">
+			<h1> {{ page.title }} </h1>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-8 col-sm-auto">
+				{{ content }}
+			</div>
+		</div>
+	<!-- </div> -->
+	<!-- <div class="container"> -->
+	<div class="row justify-content-center">
+		<div class="col-md-8 col-sm-auto">
+			{% if page.images_bottom %}
+				{% include image_table.html folder=page.image_path %}
+			{% endif %}
+		</div>
+	</div>
+	<!-- </div>
+	</div> -->
+	{% include footer.html %}
+</body>
+
 </html>

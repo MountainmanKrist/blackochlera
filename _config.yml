@@ -5,6 +5,28 @@ email: "goranbergmankristiansson@gmail.com"
 author: "Göran Kristiansson"
 description: "Tatueringar, keramik och konst."
 
+defaults:
+  -
+    scope:
+      path: "assets/images/kristin"
+    values:
+      folder: "kristin"
+  -
+    scope:
+      path: "assets/images/ingrid"
+    values:
+      folder: "ingrid"
+  -
+    scope:
+      path: "assets/images/kerstin"
+    values:
+      folder: "kerstin"
+  -
+    scope:
+      path: "assets/images/studion"
+    values:
+      folder: "studion"
+
 # Build settings (Q: Is this needed?)
 
 plugins:
@@ -13,3 +35,4 @@ plugins:
 maps:
   google:
     api_key: AIzaSyBD64fXXZHGQr-E6R0x01hYfEsvhEOaZ-k
+  
