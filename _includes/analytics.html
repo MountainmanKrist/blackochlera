@@ -1,0 +1,20 @@
+<script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', '{{ site.google_analytics }}', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<!-- FOR BUTTON EVENTS -->
+<!-- var buttons = document.getElementsByClassName("share-button");
+
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function handleOutboundLinkClicks(event) {
+    ga("send", "event", {
+      eventCategory: "Outbound Link",
+      eventAction: "click",
+      eventLabel: event.target.href,
+      transport: "beacon"
+    });
+  });
+} -->
