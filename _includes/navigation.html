@@ -11,10 +11,14 @@
 	<ul class="navbar-collapse justify-content-center collapse" id="navbarToggle">
 		{% assign pages = site.pages %}
 		{% for page in pages %}
-			{% assign class = 'active' %}
+            {% if include.title == page.title %}
+                {% assign class = 'active-link' %}
+            {% else %}
+                {% assign class = 'active' %}
+            {% endif %}
 
             {% if page.title %}
-				<li class="{{ class }}">
+				<li class="{{ class }}{{active_page}}">
 					<a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
                 </li>
             {% endif %}

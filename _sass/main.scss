@@ -30,6 +30,30 @@ body {
   display: none;
 }
 
+nav li a:hover, nav li a:focus {
+  color: $navbar-ul-color-hover-focus;
+}
+
+nav a, nav a:visited {
+  color: $navbar-ul-color-visited;
+}
+
+nav a, nav a:visited {
+  color: $navbar-ul-color-visited;
+}
+
+nav ul li.active-link>a {
+  color: $navbar-li-color-active-link;
+}
+
+a {
+  color: $body-link-color;
+}
+
+a:hover, a:focus {
+  color: $navbar-ul-color-hover-focus
+}
+
 nav ul {
   margin: 1em auto 30px;
   text-align: center;

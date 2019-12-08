@@ -3,7 +3,7 @@
 {% include header.html %}
 
 <body>
-	{% include navigation.html %}
+	{% include navigation.html title=page.title %}
 	<div class="container">
 		{% if page.images_top %}
 			{% include image_table.html folder=page.image_path %}
