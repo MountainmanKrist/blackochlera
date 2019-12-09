@@ -29,9 +29,6 @@ defaults:
 
 # Build settings (Q: Is this needed?)
 
-plugins:
-  - jekyll-maps
-
 # Google maps
 maps:
   google:
