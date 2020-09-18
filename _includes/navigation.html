@@ -1,14 +1,15 @@
-
-<nav id="navbar" class="navbar justify-content-center navbar-expand-md navbar-dark">
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+<div class="container">
+<nav id="navbar" class="navbar justify-content-center navbar-dark">
+    <!-- <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
         <div id="navActiveMenuText">
             <i class="fas fa-chevron-down"></i>
         </div> 
         <div id="navDisabledMenuText">
             <i class="fas fa-chevron-up"></i>
         </div> 
-    </button>
-	<ul class="navbar-collapse justify-content-center collapse" id="navbarToggle">
+    </button> -->
+    <ul class="navbar justify-content-center col-md-6" id="navbarToggle">
+        <row>
 		{% assign pages = site.pages %}
 		{% for page in pages %}
             {% if include.title == page.title %}
@@ -17,11 +18,49 @@
                 {% assign class = 'active' %}
             {% endif %}
 
-            {% if page.title %}
-				<li class="{{ class }}{{active_page}}">
-					<a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+            {% if page.startpage %}
+				<li class="nav-item {{ class }}{{active_page}}">
+					<a class= "nav-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
                 </li>
             {% endif %}
-		{% endfor %}
+        {% endfor %}
+        </row>
+        <row>
+    <!-- </ul> -->
+	<!-- <ul class="navbar justify-content-center" id="navbarToggle"> -->
+		{% assign pages = site.pages %}
+		{% for page in pages %}
+            {% if include.title == page.title %}
+                {% assign class = 'active-link' %}
+            {% else %}
+                {% assign class = 'active' %}
+            {% endif %}
+
+            {% if page.title and page.startpage != true and page.nav_bottom != true %}
+				<li class="nav-item {{ class }}{{active_page}}">
+					<a class= "nav-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </row>
+    <!-- </ul>
+    <ul class="navbar justify-content-center" id="navbarToggle"> -->
+    <row>
+		{% assign pages = site.pages %}
+		{% for page in pages %}
+            {% if include.title == page.title %}
+                {% assign class = 'active-link' %}
+            {% else %}
+                {% assign class = 'active' %}
+            {% endif %}
+
+            {% if page.title and page.nav_bottom %}
+				<li class="nav-item {{ class }}{{active_page}}">
+					<a class= "nav-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </row>
     </ul>
 </nav>
+</div>

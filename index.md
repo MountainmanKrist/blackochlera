@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Bläck och lera"
+startpage: true
 ---
 
 <a href="http://www.blackochlera.com/wp-content/uploads/2015/01/studio-tavlan3.jpg">
