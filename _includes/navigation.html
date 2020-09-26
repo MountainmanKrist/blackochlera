@@ -8,7 +8,7 @@
             <i class="fas fa-chevron-up"></i>
         </div> 
     </button> -->
-    <ul class="navbar justify-content-center col-md-6" id="navbarToggle">
+    <ul class="navbar justify-content-center col-md-9 col-lg-5" id="navbarToggle">
         <row>
 		{% assign pages = site.pages %}
 		{% for page in pages %}
@@ -19,7 +19,7 @@
             {% endif %}
 
             {% if page.startpage %}
-				<li class="nav-item {{ class }}{{active_page}}">
+				<li class="nav-item startpage {{ class }}{{active_page}}">
 					<a class= "nav-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
                 </li>
             {% endif %}
@@ -37,7 +37,7 @@
             {% endif %}
 
             {% if page.title and page.startpage != true and page.nav_bottom != true %}
-				<li class="nav-item {{ class }}{{active_page}}">
+				<li class="nav-item userpage {{ class }}{{active_page}}">
 					<a class= "nav-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
                 </li>
             {% endif %}
@@ -55,7 +55,7 @@
             {% endif %}
 
             {% if page.title and page.nav_bottom %}
-				<li class="nav-item {{ class }}{{active_page}}">
+				<li class="nav-item bottom {{ class }}{{active_page}}">
 					<a class= "nav-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
                 </li>
             {% endif %}
