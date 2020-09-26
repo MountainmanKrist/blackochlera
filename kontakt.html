@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: maps_page
 title: "Kontakt"
 location:
   latitude: 59.301738
@@ -9,12 +9,14 @@ nav_page: true
 nav_bottom: true
 ---
 
-<div class="col">
-  <p>Adress till studion är Bokbindarvägen 26 i Hägersten, Stockholm.&nbsp;</p>
-  <p>Egen ingång på baksidan av huset.&nbsp;</p>
-  <p><a href="https://www.instagram.com/k_blackochlera/">&nbsp;@k_blackochlera</a>&nbsp;</p>
-  <p><a href="https://www.facebook.com/blackochlera/">Bläck &amp; Lera</a>&nbsp;</p>
-</div>
-<div class="col">
-  {% include google_maps.html zoom=page.zoom latitude=page.location.latitude longitude=page.location.longitude %}
+<div class="row">
+  <div class="col">
+    <p>Adress till studion är Bokbindarvägen 26 i Hägersten, Stockholm.&nbsp;</p>
+    <p>Egen ingång på baksidan av huset.&nbsp;</p>
+    <p><a href="https://www.instagram.com/k_blackochlera/">&nbsp;@k_blackochlera</a>&nbsp;</p>
+    <p><a href="https://www.facebook.com/blackochlera/">Bläck &amp; Lera</a>&nbsp;</p>
+  </div>
+  <div class="col">
+    {% include google_maps.html zoom=page.zoom latitude=page.location.latitude longitude=page.location.longitude %}
+  </div>
 </div>
