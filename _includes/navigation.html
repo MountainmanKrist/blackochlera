@@ -1,13 +1,5 @@
 <div class="container">
 <nav id="navbar" class="navbar justify-content-center navbar-dark">
-    <!-- <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-        <div id="navActiveMenuText">
-            <i class="fas fa-chevron-down"></i>
-        </div> 
-        <div id="navDisabledMenuText">
-            <i class="fas fa-chevron-up"></i>
-        </div> 
-    </button> -->
     <ul class="navbar justify-content-center col-md-9 col-lg-5 col-sm-auto" id="navbarToggle">
         <row>
 		{% assign pages = site.pages %}
@@ -26,9 +18,7 @@
         {% endfor %}
         </row>
         <row>
-    <!-- </ul> -->
-	<!-- <ul class="navbar justify-content-center" id="navbarToggle"> -->
-		{% assign pages = site.pages %}
+		{% assign pages = site.pages | sort:"order" %}
 		{% for page in pages %}
             {% if include.title == page.title %}
                 {% assign class = 'active-link' %}
@@ -43,8 +33,6 @@
             {% endif %}
         {% endfor %}
     </row>
-    <!-- </ul>
-    <ul class="navbar justify-content-center" id="navbarToggle"> -->
     <row>
 		{% assign pages = site.pages %}
 		{% for page in pages %}
