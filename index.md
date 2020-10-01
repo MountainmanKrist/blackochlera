@@ -4,6 +4,10 @@ title: "Bläck och lera"
 startpage: true
 ---
 
-<!-- <a href="http://www.blackochlera.com/wp-content/uploads/2015/01/studio-tavlan3.jpg">
-<img class="img-fluid" src="http://www.blackochlera.com/wp-content/uploads/2015/01/studio-tavlan3.jpg" alt="14925770_10154505517122324_1022957432594871236_n" > -->
-<h2> Vi håller på att uppdatera vår hemsida </h2>
+<div class="text-center">
+    <p> (Vi bygger om!) </p>
+    <p><h2> <a href="{{ site.baseurl }}/Kristin">Tatueringar</a></h2> </p>
+    <p><h2> och </h2> </p>
+    <p><h2> Keramik </h2> </p>
+    <p>(<a href="{{ site.baseurl }}/Ingrid">Ingrid</a>, <a href="{{ site.baseurl }}/Kerstin">Kerstin</a>) </p>
+</div>
