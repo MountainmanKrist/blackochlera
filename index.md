@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Bläck och lera"
+desc: "Tatueringar och keramik"
 startpage: true
 ---
 
