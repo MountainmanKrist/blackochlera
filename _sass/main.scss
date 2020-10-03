@@ -24,14 +24,6 @@ body {
   transition: height 0s ease;
 }
 
-[class="navbar-toggler"] #navActiveMenuText  {
-  display: none;
-}
-
-[class="navbar-toggler collapsed"] #navDisabledMenuText{
-  display: none;
-}
-
 nav li a:hover, nav li a:focus {
   color: $navbar-ul-color-hover-focus;
 }
@@ -93,4 +85,11 @@ nav ul li.startpage {
 
 #map {
   height: 100%;
+}
+
+.thumbnail-img {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
 }

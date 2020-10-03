@@ -1,0 +1,6 @@
+# plugins_dir: [ _dev_plugins/mini_magicks,_dev_plugins/jekyll-thumbnail]
+plugins:
+  - mini_magick
+  - jekyll-thumbnail
+
+ENVIROMENT: "dev"
