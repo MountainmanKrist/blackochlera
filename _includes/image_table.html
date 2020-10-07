@@ -6,15 +6,8 @@
         {% endif %}
 
         <a target="_blank" href="{{ site.url }}{{ image.path }}">
-            {% if site.ENVIROMENT == "dev" %}
-                {% raw %}
-                {% assign path = image.path | remove_first: "/" %}
-                <img src="{{ site.url }}/{% thumbnail path 150x150 %}" class="thumbnail-img" alt="image" />
-                {% endraw %}
-            {% else %}
-                {% assign basepath = image.path | remove_first: image.name  %}
-                <img src="{{ site.url }}{{ basepath }}/thumbs/{{ image.basename }}_150x150{{ image.extname }}" class="thumbnail-img" alt="image" />
-            {% endif %}
+            {% assign basepath = image.path | remove_first: image.name  %}
+            <img src="{{ site.url }}{{ basepath }}/thumbs/{{ image.basename }}_150x150{{ image.extname }}" class="thumbnail-img" alt="image" />
         </a>
     {% endfor %}
 </div>

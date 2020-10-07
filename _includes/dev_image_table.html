@@ -1,0 +1,18 @@
+<div class="row justify-content-center">
+    {% assign image_files = site.static_files | where: "folder", include.folder %}
+    {% for image in image_files %}
+        {% if image.path contains 'thumb' %}
+            {% continue %}
+        {% endif %}
+
+        <a target="_blank" href="{{ site.url }}{{ image.path }}">
+            {% if site.ENVIROMENT == "dev" %}
+                {% assign path = image.path | remove_first: "/" %}
+                <img src="{{ site.url }}/{% thumbnail path 150x150 %}" class="thumbnail-img" alt="image" />
+            {% else %}
+                {% assign basepath = image.path | remove_first: image.name  %}
+                <img src="{{ site.url }}{{ basepath }}/thumbs/{{ image.basename }}_150x150{{ image.extname }}" class="thumbnail-img" alt="image" />
+            {% endif %}
+        </a>
+    {% endfor %}
+</div>

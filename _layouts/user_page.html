@@ -22,7 +22,11 @@
 	<div class="row justify-content-center">
 		<div class="col-md-8 col-sm-auto">
 			{% if page.images_bottom %}
-				{% include image_table.html folder=page.image_path %}
+				{% if site.ENVIROMENT == "dev" %}
+					{% include dev_image_table.html folder=page.image_path %}
+				{% else %}
+					{% include image_table.html folder=page.image_path %}
+				{% endif %}
 			{% endif %}
 		</div>
 	</div>

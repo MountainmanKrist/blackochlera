@@ -36,3 +36,8 @@ maps:
 
 # Google Analytics
 google_analytics: UA-154203542-1
+
+ENVIROMENT: "production"
+
+exclude:
+  - dev_image_table.html
