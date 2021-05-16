@@ -6,7 +6,6 @@ startpage: true
 ---
 
 <div class="text-center">
-    <p> (Vi bygger om!) </p>
     {% assign kristin = site.pages | where: 'title', "Kristin" | map: "url" %}
     {% assign ingrid = site.pages | where: 'title', "Ingrid" | map: "url" %}
     {% assign kerstin = site.pages | where: 'title', "Kerstin" | map: "url" %}
