@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
     {% assign image_files = site.static_files | where: "folder", include.folder %}
     {% for image in image_files %}
-        {% if image.path contains 'thumb' %}
+        {% if image.path contains 'thumbs' %}
             {% continue %}
         {% endif %}
 
